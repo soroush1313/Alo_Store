@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Alo_Store.Application.Services.Users.Queries.GetRoles;
 using Alo_Store.Application.Services.Users.Queries.GetUsers;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace EndPoint.Store.Areas.Admin.Controllers
 {
@@ -31,7 +32,7 @@ namespace EndPoint.Store.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            ViewBag.Roles = _getRolesService.Execute();
+            ViewBag.Roles =new SelectList(_getRolesService.Execute().Data, "Id","Name");
             return View();
         }
     }

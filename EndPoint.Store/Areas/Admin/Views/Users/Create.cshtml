@@ -1,4 +1,4 @@
-﻿
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "ثبت نام کاربر جدید";
     Layout = "~/Areas/Admin/Views/Shared/_Adminlayout.cshtml";
@@ -36,23 +36,17 @@
                                             <input type="em" class="form-control" id="helpInputTop">
                                         </fieldset>
                                     </div>
-                                    
-                                    
+
+
                                     <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
                                         <fieldset class="form-group">
                                             <label for="basicSelect">نقش</label>
-                                            <select class="form-control" id="basicSelect">
-                                                <option>انتخاب گزینه</option>
-                                                <option>گزینه 1</option>
-                                                <option>گزینه 2</option>
-                                                <option>گزینه 3</option>
-                                                <option>گزینه 4</option>
-                                                <option>گزینه 5</option>
+                                            <select class="form-control" id="Role" , name="Role" asp-items="ViewBag.Roles">
                                             </select>
                                             <p><small class="text-muted">سطح دسترسی کاربر مورد نظر را تعیین کنید</small></p>
                                         </fieldset>
                                     </div>
-                                    
+
 
                                     <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
                                         <fieldset class="form-group">
@@ -67,7 +61,7 @@
 
                                         </fieldset>
                                     </div>
-                                    
+
                                     <button class="btn btn-info btn-lg btn-block">تکمیل ثبت نام</button>
 
                                 </div>
