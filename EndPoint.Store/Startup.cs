@@ -10,6 +10,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Alo_Store.Application.Interfaces.Contexts;
+using Alo_Store.Application.Services.Users.Commands.RegisterUser;
+using Alo_Store.Application.Services.Users.Commands.RemoveUser;
 using Alo_Store.Application.Services.Users.Queries.GetRoles;
 using Alo_Store.Application.Services.Users.Queries.GetUsers;
 using Microsoft.EntityFrameworkCore;
@@ -31,6 +33,8 @@ namespace EndPoint.Store
             services.AddScoped<IDatabaseContext, DatabaseContext>();
             services.AddScoped<IGetUsersService, GetUsersService>();
             services.AddScoped<IGetRolesService, GetRolesService>();
+            services.AddScoped<IRegisterUserService, RegisterUserService>();
+            services.AddScoped<IRemoveUserService, RemoveUserService>();
 
             services.AddDbContext<DatabaseContext>(options =>
             {

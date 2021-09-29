@@ -14,9 +14,12 @@ namespace Alo_Store.Persistence.FluentConfigs.Users
         public void Configure(EntityTypeBuilder<User> builder)
         {
             builder.HasKey(u => u.Id);
+            builder.Property(u => u.Id).ValueGeneratedOnAdd();
             builder.Property(u => u.Email).IsRequired();
             builder.Property(u => u.FullName).IsRequired();
             builder.Property(u => u.Password).IsRequired();
+            builder.HasIndex(u => u.Email).IsUnique();
+            builder.HasQueryFilter(u => !u.IsRemoved);
         }
     }
 }
