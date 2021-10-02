@@ -16,9 +16,26 @@ namespace Alo_Store.Application.Services.Users.Commands.UserStatusChange
         {
             _context = context;
         }
-        public ResultDto Execute(long Id)
+        public ResultDto Execute(long UserId)
         {
-            throw new NotImplementedException();
+            var user = _context.Users.Find(UserId);
+            if (user==null)
+            {
+                return new ResultDto
+                {
+                    IsSuccess = false,
+                    Message = "کاربر یافت نشد"
+                };
+            }
+
+            user.IsActive = !user.IsActive;
+            _context.SaveChanges();
+            string userState = user.IsActive == true ? "فعال" : "غیر فعال";
+            return new ResultDto()
+            {
+                IsSuccess = true,
+                Message = $"کاربر با موفقیت {userState} شد"
+            };
         }
     }
 }

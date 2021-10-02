@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Alo_Store.Application.Services.Users.Commands.RegisterUser;
 using Alo_Store.Application.Services.Users.Commands.RemoveUser;
+using Alo_Store.Application.Services.Users.Commands.UserStatusChange;
 using Alo_Store.Application.Services.Users.Queries.GetRoles;
 using Alo_Store.Application.Services.Users.Queries.GetUsers;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -18,13 +19,15 @@ namespace EndPoint.Store.Areas.Admin.Controllers
         private readonly IGetRolesService _getRolesService;
         private readonly IRegisterUserService _registerUserService;
         private readonly IRemoveUserService _removeUserService;
+        private readonly IUserStatusChangeService _userStatusChangeService;
 
-        public UsersController(IGetUsersService getUsersService, IGetRolesService getRolesService, IRegisterUserService registerUserService, IRemoveUserService removeUserService)
+        public UsersController(IGetUsersService getUsersService, IGetRolesService getRolesService, IRegisterUserService registerUserService, IRemoveUserService removeUserService, IUserStatusChangeService userStatusChangeService)
         {
             _getUsersService = getUsersService;
             _getRolesService = getRolesService;
             _registerUserService = registerUserService;
             _removeUserService = removeUserService;
+            _userStatusChangeService = userStatusChangeService;
         }
         [Area("Admin")]
         public IActionResult Index(string searchKey , int page=1)
@@ -65,6 +68,12 @@ namespace EndPoint.Store.Areas.Admin.Controllers
         public IActionResult Delete(long UserId)
         {
             return Json(_removeUserService.Execute(UserId));
+        }
+
+        [HttpPost]
+        public IActionResult UserStatusChange(long UserId)
+        {
+            return Json(_userStatusChangeService.Execute(UserId));
         }
     }
 }
