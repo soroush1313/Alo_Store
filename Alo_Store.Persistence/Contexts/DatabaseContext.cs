@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Alo_Store.Application.Interfaces.Contexts;
+using Alo_Store.Domain.Entities.Products;
+using Alo_Store.Persistence.FluentConfigs.Products;
 using Alo_Store.Persistence.FluentConfigs.Users;
 
 namespace Alo_Store.Persistence.Contexts
@@ -19,12 +21,14 @@ namespace Alo_Store.Persistence.Contexts
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<UserInRole> UserInRoles { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UserConfig());
             modelBuilder.ApplyConfiguration(new UserInRoleConfig());
             modelBuilder.ApplyConfiguration(new RoleConfig());
+            modelBuilder.ApplyConfiguration(new CategoryConfig());
         }
     }
 }

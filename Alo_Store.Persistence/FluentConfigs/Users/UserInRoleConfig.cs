@@ -22,6 +22,9 @@ namespace Alo_Store.Persistence.FluentConfigs.Users
             builder.HasOne(ur => ur.Role)
                 .WithMany(r => r.UserInRoles)
                 .HasForeignKey(ur => ur.RoleId);
+
+            builder.HasQueryFilter(ur => !ur.IsRemoved);
+
         }
     }
 }

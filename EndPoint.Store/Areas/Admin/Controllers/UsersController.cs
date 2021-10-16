@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Alo_Store.Application.Services.Users.Commands.EditUser;
 using Alo_Store.Application.Services.Users.Commands.RegisterUser;
 using Alo_Store.Application.Services.Users.Commands.RemoveUser;
 using Alo_Store.Application.Services.Users.Commands.UserStatusChange;
@@ -20,16 +21,18 @@ namespace EndPoint.Store.Areas.Admin.Controllers
         private readonly IRegisterUserService _registerUserService;
         private readonly IRemoveUserService _removeUserService;
         private readonly IUserStatusChangeService _userStatusChangeService;
+        private readonly IEditUserService _editUserService;
 
-        public UsersController(IGetUsersService getUsersService, IGetRolesService getRolesService, IRegisterUserService registerUserService, IRemoveUserService removeUserService, IUserStatusChangeService userStatusChangeService)
+        public UsersController(IGetUsersService getUsersService, IGetRolesService getRolesService, IRegisterUserService registerUserService, IRemoveUserService removeUserService, IUserStatusChangeService userStatusChangeService, IEditUserService editUserService)
         {
             _getUsersService = getUsersService;
             _getRolesService = getRolesService;
             _registerUserService = registerUserService;
             _removeUserService = removeUserService;
             _userStatusChangeService = userStatusChangeService;
+            _editUserService = editUserService;
         }
-        [Area("Admin")]
+
         public IActionResult Index(string searchKey , int page=1)
         {
             return View(_getUsersService.Execute(new RequestGetUserDto
@@ -74,6 +77,17 @@ namespace EndPoint.Store.Areas.Admin.Controllers
         public IActionResult UserStatusChange(long UserId)
         {
             return Json(_userStatusChangeService.Execute(UserId));
+        }
+
+        [HttpPost]
+        public IActionResult Edit(long UserId, string FullName, string Email)
+        {
+            return Json(_editUserService.Execute(new RequestEditUserDto
+            {
+                FullName = FullName,
+                UserId = UserId,
+                Email = Email
+            }));
         }
     }
 }

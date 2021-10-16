@@ -9,12 +9,21 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Alo_Store.Application.FluentValidation;
 using Alo_Store.Application.Interfaces.Contexts;
+using Alo_Store.Application.Services.Users.Commands.EditUser;
 using Alo_Store.Application.Services.Users.Commands.RegisterUser;
 using Alo_Store.Application.Services.Users.Commands.RemoveUser;
+using Alo_Store.Application.Services.Users.Commands.UserLogin;
 using Alo_Store.Application.Services.Users.Commands.UserStatusChange;
 using Alo_Store.Application.Services.Users.Queries.GetRoles;
 using Alo_Store.Application.Services.Users.Queries.GetUsers;
+using Alo_Store.Domain.Entities.Users;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace EndPoint.Store
@@ -31,18 +40,35 @@ namespace EndPoint.Store
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            }).AddCookie(options =>
+            {
+                options.LoginPath = new PathString("/");
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(5.0);
+            });
+
             services.AddScoped<IDatabaseContext, DatabaseContext>();
             services.AddScoped<IGetUsersService, GetUsersService>();
             services.AddScoped<IGetRolesService, GetRolesService>();
             services.AddScoped<IRegisterUserService, RegisterUserService>();
             services.AddScoped<IRemoveUserService, RemoveUserService>();
+            services.AddScoped<IUserLoginService,UserLoginService>();
             services.AddScoped<IUserStatusChangeService, UserStatusChangeService>();
+            services.AddScoped<IEditUserService, EditUserService>();
 
             services.AddDbContext<DatabaseContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
             services.AddControllersWithViews();
+            services.AddFluentValidation();
+            services.AddMvcCore().AddFluentValidation(f => f.RegisterValidatorsFromAssemblyContaining<UserValidator>());
+            //services.AddTransient<IValidator<User>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,6 +90,7 @@ namespace EndPoint.Store
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {

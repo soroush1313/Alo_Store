@@ -16,6 +16,7 @@ namespace Alo_Store.Persistence.FluentConfigs.Users
         {
             builder.HasKey(r => r.Id);
             builder.Property(r => r.Name).IsRequired();
+            builder.HasQueryFilter(r => !r.IsRemoved);
             builder.HasData(new Role {Id = 1, Name = nameof(UserRoles.Admin)});
             builder.HasData(new Role {Id = 2, Name = nameof(UserRoles.Operator)});
             builder.HasData(new Role {Id = 3, Name = nameof(UserRoles.Customer)});

@@ -20,6 +20,8 @@ namespace Alo_Store.Persistence.FluentConfigs.Users
             builder.Property(u => u.Password).IsRequired();
             builder.HasIndex(u => u.Email).IsUnique();
             builder.HasQueryFilter(u => !u.IsRemoved);
+            builder.HasQueryFilter(u => !u.IsRemoved);
+
         }
     }
 }

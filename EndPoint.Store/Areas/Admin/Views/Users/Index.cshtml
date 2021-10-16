@@ -27,7 +27,7 @@
 
                                 <form method="get" class="col-xl-4 col-lg-6 col-md-12 mb-1">
                                     <fieldset class="form-group">
-                                        <input type="text" class="form-control" name="serchkey">
+                                        <input type="text" class="form-control" name="searchkey">
                                         <button class="btn btn-success">جستجو</button>
                                     </fieldset>
                                 </form>
@@ -49,7 +49,7 @@
                                                         <td class="sorting_1">@item.FullName</td>
                                                         <td>@item.Email</td>
                                                         <td>
-                                                            <button class="btn btn-info" onclick="ShowModalEdituser('@item.Id' , '@item.FullName')">ویرایش</button>
+                                                            <button class="btn btn-info" onclick="ShowModalEdituser('@item.Id' , '@item.FullName' , '@item.Email')">ویرایش</button>
                                                             <button class="btn btn-danger" onclick="DeleteUser('@item.Id')">حذف</button>
                                                             @if (item.IsActive)
                                                             {
@@ -198,11 +198,13 @@
 
             var userId = $("#Edit_UserId").val();
             var fullName = $("#Edit_Fullname").val();
+            var email = $("#Edit_Email").val();
 
             var postData = {
                 'UserId': userId,
                 'FullName': fullName,
-            };
+                'Email' : email
+            };  
 
 
             $.ajax({
@@ -239,9 +241,10 @@
         }
 
 
-        function ShowModalEdituser(UserId, fullName) {
+        function ShowModalEdituser(UserId, fullName, Email) {
             $('#Edit_Fullname').val(fullName)
             $('#Edit_UserId').val(UserId)
+            $('#Edit_Email').val(Email)
 
             $('#EditUser').modal('show');
 
@@ -275,6 +278,9 @@
                             <input type="hidden" id="Edit_UserId" />
                             <label for="basicInput">نام و نام خانوادگی</label>
                             <input type="text" class="form-control" id="Edit_Fullname">
+                            
+                            <label for="basicInput">ایمیل</label>
+                            <input type="text" class="form-control" id="Edit_Email">
                         </fieldset>
                     </div>
                 </div>

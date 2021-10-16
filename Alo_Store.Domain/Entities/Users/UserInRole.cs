@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Alo_Store.Domain.Entities.Commons;
 
 namespace Alo_Store.Domain.Entities.Users
 {
-    public class UserInRole
+    public class UserInRole:BaseEntity
     {
         public long Id { get; set; }
 

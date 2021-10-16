@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,20 +11,17 @@
     <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/bootstrap.css">
     <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/owl.carousel.min.css">
     <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/nice-select.css">
-    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/jquery.jqZoom.css">
-    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/sweetalert2.min.css">
     <!-- main-style---------------------------------->
     <link rel="stylesheet" href="~/SiteTemplate/assets/css/main.css">
     <link rel="stylesheet" href="~/SiteTemplate/assets/css/responsive.css">
 </head>
-
 <body>
     <!-- header-------------------------------->
     <header class="header-main">
         <div class="container-main">
             <div class="d-block">
                 <section class="h-main-row">
-                    <div class="col-lg-9 col-md-12 col-xs-12 pr">
+                    <div class="col-lg-9 col-xs-12 pr">
                         <div class="header-right">
                             <div class="col-lg-3 pr">
                                 <div class="header-logo row text-right">
@@ -34,15 +30,14 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-8 pr">
+                            <div class="col-lg-9 pl">
                                 <div class="header-search row text-right">
                                     <div class="header-search-box">
                                         <form action="#" class="form-search">
-                                            <input type="search" class="header-search-input" name="search-input"
-                                                   placeholder="نام کالا، برند و یا دسته مورد نظر خود را جستجو کنید…">
+                                            <input type="search" class="header-search-input" name="search-input" placeholder="نام کالا، برند و یا دسته مورد نظر خود را جستجو کنید…">
                                             <div class="action-btns">
                                                 <button class="btn btn-search" type="submit">
-                                                    <img src="~/SiteTemplate/assets/images/search.png" alt="search">
+                                                    <i class="fa fa-search"></i>
                                                 </button>
                                                 <div class="search-filter">
                                                     <div class="form-ui">
@@ -62,103 +57,59 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <div class="search-result">
-                                            <ul class="search-result-list mb-0">
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="mdi mdi-clock-outline"></i>
-                                                        کالای دیجیتال
-                                                        <button class="btn btn-light btn-continue-search" type="submit">
-                                                            <i class="fa fa-angle-left"></i>
-                                                        </button>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="mdi mdi-clock-outline"></i>
-                                                        آرایشی و بهداشتی
-                                                        <button class="btn btn-light btn-continue-search" type="submit">
-                                                            <i class="fa fa-angle-left"></i>
-                                                        </button>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="mdi mdi-clock-outline"></i>
-                                                        گوشی موبایل
-                                                        <button class="btn btn-light btn-continue-search" type="submit">
-                                                            <i class="fa fa-angle-left"></i>
-                                                        </button>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="mdi mdi-clock-outline"></i>
-                                                        تبلت
-                                                        <button class="btn btn-light btn-continue-search" type="submit">
-                                                            <i class="fa fa-angle-left"></i>
-                                                        </button>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="mdi mdi-clock-outline"></i>
-                                                        لپ تاپ
-                                                        <button class="btn btn-light btn-continue-search" type="submit">
-                                                            <i class="fa fa-angle-left"></i>
-                                                        </button>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="mdi mdi-clock-outline"></i>
-                                                        دوربین
-                                                        <button class="btn btn-light btn-continue-search" type="submit">
-                                                            <i class="fa fa-angle-left"></i>
-                                                        </button>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                            <div class="localSearchSimple"></div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-0 col-xs-12 pl">
+                    <div class="col-lg-3 col-md-3 col-xs-12 pl">
                         <div class="header-left">
                             <div class="header-account text-left">
                                 <div class="d-block">
                                     <div class="account-box">
-                                        <div class="nav-account d-block pl">
-                                            <span class="icon-account">
-                                                <img src="~/SiteTemplate/assets/images/man.png" class="avator">
-                                            </span>
-                                            <span class="title-account">حساب کاربری</span>
-                                            <div class="dropdown-menu">
-                                                <ul class="account-uls mb-0">
-                                                    <li class="account-item">
-                                                        <a href="#" class="account-link">پنل کاربری</a>
-                                                    </li>
-                                                    <li class="account-item">
-                                                        <a href="#" class="account-link">سفارشات من</a>
-                                                    </li>
-                                                    <li class="account-item">
-                                                        <a href="#" class="account-link">تنظیمات</a>
-                                                    </li>
-                                                    <li class="account-item">
-                                                        <a href="#" class="account-link">خروج</a>
-                                                    </li>
-                                                </ul>
+                                        @if (User.Identity.IsAuthenticated)
+                                        {
+                                            <div class="nav-account d-block pl">
+                                                <span class="icon-account">
+                                                    <img src="~/SiteTemplate/assets/images/man.png" class="avator">
+                                                </span>
+                                                <span class="title-account">@User.Identity.Name</span>
+                                                <div class="dropdown-menu">
+                                                    <ul class="account-uls mb-0">
+                                                        <li class="account-item">
+                                                            <a href="#" class="account-link">پنل کاربری</a>
+                                                        </li>
+                                                        <li class="account-item">
+                                                            <a href="#" class="account-link">سفارشات من</a>
+                                                        </li>
+                                                        <li class="account-item">
+                                                            <a href="#" class="account-link">تنظیمات</a>
+                                                        </li>
+                                                        <li class="account-item">
+                                                            <a href="~/authentication/SignOut" class="account-link">خروج</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                        </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="nav-account d-block pl">
+                                                <a href="~/authentication/signup">
+                                                    <span class="title-account">ثبت نام</span>
+                                                </a>
+
+                                                <a href="~/authentication/signin">
+                                                    <span class="title-account">ورود</span>
+                                                </a>
+                                            </div>
+                                        }
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="overlay-search-box"></div>
                 </section>
                 <div>
                     <nav class="header-main-nav">
@@ -773,7 +724,7 @@
                                         <div class="header-cart-basket">
                                             <a href="#" class="cart-basket-box">
                                                 <span class="icon-cart">
-                                                    <i class="mdi mdi-shopping"></i>
+                                                    <i class="mdi mdi-cart"></i>
                                                 </span>
                                                 <span class="title-cart">سبد خرید</span>
                                                 <span class="price-cart">
@@ -784,78 +735,50 @@
                                             </a>
                                             <div class="widget-shopping-cart">
                                                 <div class="widget-shopping-cart-content">
-                                                    <div class="wrapper">
-                                                        <div class="scrollbar" id="style-1">
-                                                            <div class="force-overflow">
-                                                                <ul class="product-list-widget">
-                                                                    <li class="mini-cart-item">
-                                                                        <div class="mini-cart-item-content">
-                                                                            <a href="#" class="mini-cart-item-close">
-                                                                                <i class="mdi mdi-close"></i>
-                                                                            </a>
-                                                                            <a href="#"
-                                                                               class="mini-cart-item-image d-block">
-                                                                                <img src="~/SiteTemplate/assets/images/menu-main/img-card.jpg">
-                                                                            </a>
-                                                                            <span class="product-name-card">
-                                                                                لپ تاپ چووی
-                                                                                الترابوک 14
-                                                                                اینچ پرو
-                                                                            </span>
-                                                                            <div class="variation">
-                                                                                <span class="variation-n">
-                                                                                    فروشنده :
-                                                                                </span>
-                                                                                <p class="mb-0">کالامارکت </p>
-                                                                            </div>
-                                                                            <div class="header-basket-list-item-color-badge">
-                                                                                رنگ:
-                                                                                <span style="background: #000"></span>
-                                                                            </div>
-                                                                            <div class="quantity">
-                                                                                <span class="quantity-Price-amount">
-                                                                                    15,000,000
-                                                                                    <span>تومان</span>
-                                                                                </span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li class="mini-cart-item">
-                                                                        <div class="mini-cart-item-content">
-                                                                            <a href="#" class="mini-cart-item-close">
-                                                                                <i class="mdi mdi-close"></i>
-                                                                            </a>
-                                                                            <a href="#"
-                                                                               class="mini-cart-item-image d-block">
-                                                                                <img src="~/SiteTemplate/assets/images/menu-main/img-card-2.jpg">
-                                                                            </a>
-                                                                            <span class="product-name-card">
-                                                                                هواوای میت
-                                                                                بوک X پرو
-                                                                                13.9 اینچ
-                                                                            </span>
-                                                                            <div class="variation">
-                                                                                <span class="variation-n">
-                                                                                    فروشنده :
-                                                                                </span>
-                                                                                <p class="mb-0">کالامارکت </p>
-                                                                            </div>
-                                                                            <div class="header-basket-list-item-color-badge">
-                                                                                رنگ:
-                                                                                <span style="background: #ccc"></span>
-                                                                            </div>
-                                                                            <div class="quantity">
-                                                                                <span class="quantity-Price-amount">
-                                                                                    10,000,000
-                                                                                    <span>تومان</span>
-                                                                                </span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
+                                                    <ul class="product-list-widget">
+                                                        <li class="mini-cart-item">
+                                                            <div class="mini-cart-item-content">
+                                                                <a href="#" class="mini-cart-item-close">
+                                                                    <i class="fa fa-trash"></i>
+                                                                </a>
+                                                                <a href="#" class="mini-cart-item-image d-block">
+                                                                    <img src="~/SiteTemplate/assets/images/menu-main/img-card.jpg">
+                                                                </a>
+                                                                <span class="product-name-card">لپ تاپ چووی الترابوک 14 اینچ پرو</span>
+                                                                <div class="variation">
+                                                                    <span class="variation-n">فروشنده : </span>
+                                                                    <p class="mb-0">دیجی اسمارت </p>
+                                                                </div>
+                                                                <div class="quantity">
+                                                                    <span class="quantity-Price-amount">
+                                                                        15,000,000
+                                                                        <span>تومان</span>
+                                                                    </span>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
+                                                        </li>
+                                                        <li class="mini-cart-item">
+                                                            <div class="mini-cart-item-content">
+                                                                <a href="#" class="mini-cart-item-close">
+                                                                    <i class="fa fa-trash"></i>
+                                                                </a>
+                                                                <a href="#" class="mini-cart-item-image d-block">
+                                                                    <img src="~/SiteTemplate/assets/images/menu-main/img-card-2.jpg">
+                                                                </a>
+                                                                <span class="product-name-card">هواوای میت بوک X پرو 13.9 اینچ</span>
+                                                                <div class="variation">
+                                                                    <span class="variation-n">فروشنده : </span>
+                                                                    <p class="mb-0">دیجی اسمارت </p>
+                                                                </div>
+                                                                <div class="quantity">
+                                                                    <span class="quantity-Price-amount">
+                                                                        10,000,000
+                                                                        <span>تومان</span>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
                                                     <div class="mini-card-total">
                                                         <strong>قیمت کل : </strong>
                                                         <span class="price-total">
@@ -881,20 +804,13 @@
                     <div class="nav-header">
                         <div class="header-cover"></div>
                         <div class="logo-wrap">
-                            <a class="logo-icon" href="#">
-                                <img alt="logo-icon" src="~/SiteTemplate/assets/images/logo.png"
-                                     width="40">
-                            </a>
+                            <a class="logo-icon" href="#"><img alt="logo-icon" src="~/SiteTemplate/assets/images/logo.png" width="40"></a>
                         </div>
                     </div>
                     <ul class="nav-categories ul-base">
                         <li>
-                            <a href="#" class="collapsed" type="button" data-toggle="collapse"
-                               data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                <i class="mdi mdi-chevron-down"></i>کالای دیجیتال
-                            </a>
-                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-                                 data-parent="#accordionExample" style="">
+                            <a href="#" class="collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><i class="mdi mdi-chevron-down"></i>کالای دیجیتال</a>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample" style="">
                                 <ul>
                                     <li class="has-sub">
                                         <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
@@ -929,12 +845,8 @@
                             </div>
                         </li>
                         <li>
-                            <a href="#" class="collapsed" type="button" data-toggle="collapse"
-                               data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <i class="mdi mdi-chevron-down"></i>آرایشی و بهداشتی
-                            </a>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                 data-parent="#accordionExample" style="">
+                            <a href="#" class="collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="mdi mdi-chevron-down"></i>آرایشی و بهداشتی</a>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample" style="">
                                 <ul>
                                     <li class="has-sub">
                                         <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
@@ -971,12 +883,8 @@
                         <li><a href="#">ابزار و اداری</a></li>
                         <li><a href="#">مد و پوشاک</a></li>
                         <li>
-                            <a href="#" class="collapsed" type="button" data-toggle="collapse"
-                               data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <i class="mdi mdi-chevron-down"></i>خانه و آشپزخانه
-                            </a>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                 data-parent="#accordionExample" style="">
+                            <a href="#" class="collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="mdi mdi-chevron-down"></i>خانه و آشپزخانه</a>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample" style="">
                                 <ul>
                                     <li class="has-sub">
                                         <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
@@ -1025,13 +933,13 @@
         </div>
     </header>
     <div class="nav-categories-overlay"></div>
-    <!-- header-------------------------------->
+
 
     @RenderBody()
 
 
 
-<!-- footer------------------------------------------->
+    <!-- footer------------------------------------------->
     <footer class="footer-main-site">
         <section class="d-block d-xl-block d-lg-block d-md-block d-sm-block order-1">
             <div class="footer-shopping-features">
@@ -1039,40 +947,35 @@
                     <div class="col-12">
                         <div class="item">
                             <span class="icon-shopping">
-                                <img src="~/SiteTemplate/assets/images/footer/features/delivery-truck.svg" width="50"
-                                     alt="تحویل اکسپرس" class="img-shopping">
+                                <i class="fa fa-paper-plane"></i>
                             </span>
                             <span class="title-shopping">تحویل اکسپرس</span>
                             <span class="desc-shopping">در کمترین زمان دریافت کنید</span>
                         </div>
                         <div class="item">
                             <span class="icon-shopping">
-                                <img src="~/SiteTemplate/assets/images/footer/features/24-hours-support.svg" width="50"
-                                     alt="پشتیبانی ۲۴ ساعته" class="img-shopping">
+                                <i class="fa fa-volume-control-phone"></i>
                             </span>
                             <span class="title-shopping">پشتیبانی ۲۴ ساعته</span>
                             <span class="desc-shopping">پشتیبانی هفت روز هفته</span>
                         </div>
                         <div class="item">
                             <span class="icon-shopping">
-                                <img src="~/SiteTemplate/assets/images/footer/features/income.svg" width="50" alt="پرداخت در محل"
-                                     class="img-shopping">
+                                <i class="fa fa-home"></i>
                             </span>
                             <span class="title-shopping">پرداخت در محل</span>
                             <span class="desc-shopping">هنگام دریافت پرداخت کنید</span>
                         </div>
                         <div class="item">
                             <span class="icon-shopping">
-                                <img src="~/SiteTemplate/assets/images/footer/features/easy-return.svg" width="50"
-                                     alt="۷ روز ضمانت بازگشت" class="img-shopping">
+                                <i class="fa fa-repeat"></i>
                             </span>
                             <span class="title-shopping">۷ روز ضمانت بازگشت</span>
                             <span class="desc-shopping">هفت روز مهلت دارید </span>
                         </div>
                         <div class="item">
                             <span class="icon-shopping">
-                                <img src="~/SiteTemplate/assets/images/footer/features/original.svg" width="50"
-                                     alt="ضمانت اصل‌بودن کالا" class="img-shopping">
+                                <i class="fa fa-shield"></i>
                             </span>
                             <span class="title-shopping">ضمانت اصل‌بودن کالا</span>
                             <span class="desc-shopping">تایید اصالت کالا</span>
@@ -1187,13 +1090,9 @@
                             <div class="shortcode-widget-area">
                                 <form action="#" class="form-newsletter">
                                     <fieldset>
-                                        <span class="form-newsletter-title">
-                                            با عضویت در خبرنامه از آخرین اخبار و
-                                            محصولات سایت مطلع شوید...
-                                        </span>
+                                        <span class="form-newsletter-title"> با عضویت در خبرنامه از آخرین اخبار و محصولات سایت مطلع شوید...</span>
                                         <div class="input-group-newsletter">
-                                            <input type="email" class="input-field form-control"
-                                                   placeholder="آدرس ایمیل خود را وارد کنید">
+                                            <input type="email" class="input-field form-control" placeholder="آدرس ایمیل خود را وارد کنید">
                                             <button class="btn btn-info btn-secondary" type="submit">ارسال</button>
                                         </div>
                                     </fieldset>
@@ -1205,14 +1104,7 @@
                                 <div class="footer-content d-block">
                                     <div class="text pr-1">
                                         <h2 class="title">فروشگاه اینترنتی دیجی اسمارت</h2>
-                                        <p class="desc">
-                                            دیجی اسمارت به عنوان یکی از قدیمی‌ترین فروشگاه های اینترنتی با
-                                            بیش از یک دهه تجربه، با پایبندی به سه اصل کلیدی، پرداخت در محل، 7 روز ضمانت
-                                            بازگشت کالا و تضمین اصل‌بودن کالا، موفق شده تا همگام با فروشگاه‌های معتبر
-                                            جهان، به بزرگ‌ترین فروشگاه اینترنتی ایران تبدیل شود. به محض ورود به دیجی
-                                            اسمارت با یک سایت پر از کالا رو به رو می‌شوید! هر آنچه که نیاز دارید و به
-                                            ذهن شما خطور می‌کند در اینجا پیدا خواهید کرد.
-                                        </p>
+                                        <p class="desc"> دیجی اسمارت به عنوان یکی از قدیمی‌ترین فروشگاه های اینترنتی با بیش از یک دهه تجربه، با پایبندی به سه اصل کلیدی، پرداخت در محل، 7 روز ضمانت بازگشت کالا و تضمین اصل‌بودن کالا، موفق شده تا همگام با فروشگاه‌های معتبر جهان، به بزرگ‌ترین فروشگاه اینترنتی ایران تبدیل شود. به محض ورود به دیجی اسمارت با یک سایت پر از کالا رو به رو می‌شوید! هر آنچه که نیاز دارید و به ذهن شما خطور می‌کند در اینجا پیدا خواهید کرد.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1221,23 +1113,18 @@
                                     <div class="widget widget-product card mb-0">
                                         <div class="product-carousel-symbol owl-carousel owl-theme owl-rtl owl-loaded owl-drag">
                                             <div class="owl-stage-outer">
-                                                <div class="owl-stage"
-                                                     style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2234px;">
-                                                    <div class="owl-item active"
-                                                         style="width: 300.75px; margin-left: 10px;">
+                                                <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2234px;">
+                                                    <div class="owl-item active" style="width: 300.75px; margin-left: 10px;">
                                                         <div class="item">
                                                             <a href="#" class="d-block hover-img-link">
-                                                                <img src="~/SiteTemplate/assets/images/footer/license/L-1.png"
-                                                                     class="img-fluid img-brand" alt="">
+                                                                <img src="~/SiteTemplate/assets/images/footer/license/L-1.png" class="img-fluid img-brand" alt="">
                                                             </a>
                                                         </div>
                                                     </div>
-                                                    <div class="owl-item active"
-                                                         style="width: 300.75px; margin-left: 10px;">
+                                                    <div class="owl-item active" style="width: 300.75px; margin-left: 10px;">
                                                         <div class="item">
                                                             <a href="#" class="d-block hover-img-link mt-0">
-                                                                <img src="~/SiteTemplate/assets/images/footer/license/L-2.png"
-                                                                     class="img-fluid img-brand" alt="">
+                                                                <img src="~/SiteTemplate/assets/images/footer/license/L-2.png" class="img-fluid img-brand" alt="">
                                                             </a>
                                                         </div>
                                                     </div>
@@ -1258,7 +1145,7 @@
             </div>
         </section>
     </footer>
-    <!-- footer---------------------------------->
+    <!-- footer------------------------------------------->
     <!-- scroll_Progress------------------------->
     <div class="progress-wrap">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -1266,30 +1153,17 @@
         </svg>
     </div>
     <!-- scroll_Progress------------------------->
-    <!-- Page Loader----------------------------->
-    <div class="P-loader">
-        <div class="P-loader-content">
-            <div class="logo-loader">
-                <img src="~/SiteTemplate/assets/images/logo.png" alt="logo">
-            </div>
-            <div class="pic-loader text-center">
-                <img src="~/SiteTemplate/assets/images/three-dots.svg" width="50" alt="">
-            </div>
-        </div>
-    </div>
-    <!-- Page Loader----------------------------->
 
 </body>
 <!-- file js---------------------------------------------------->
-<script src="~/SiteTemplate/assets/js/vendor/jquery-3.2.1.min.js"></script>
+
+
+<script src="~/SiteTemplate/~/SiteTemplate/assets/js/vendor/jquery-3.2.1.min.js"></script>
 <script src="~/SiteTemplate/assets/js/vendor/bootstrap.js"></script>
 <!-- plugin----------------------------------------------------->
 <script src="~/SiteTemplate/assets/js/vendor/owl.carousel.min.js"></script>
 <script src="~/SiteTemplate/assets/js/vendor/jquery.countdown.js"></script>
 <script src="~/SiteTemplate/assets/js/vendor/jquery.nice-select.min.js"></script>
-<script src="~/SiteTemplate/assets/js/vendor/jquery.jqZoom.js"></script>
-<script src="~/SiteTemplate/assets/js/vendor/sweetalert2.all.min.js"></script>
 <!-- main js---------------------------------------------------->
 <script src="~/SiteTemplate/assets/js/main.js"></script>
-
 </html>

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Alo_Store.Common.Dto;
 
 namespace Alo_Store.Application.Services.Users.Commands.EditUser
 {
-    public interface IEditUserService
+    public class RequestEditUserDto
     {
-        ResultDto Execute(RequestEditUserDto request);
+        public long UserId { get; set; }
+        public string FullName { get; set; }
+        public string Email { get; set; }
     }
 }
